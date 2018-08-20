@@ -13,7 +13,7 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
-public class TSellerInfo {
+public class SellerInfo {
 
     @Id
     private String sellerId;

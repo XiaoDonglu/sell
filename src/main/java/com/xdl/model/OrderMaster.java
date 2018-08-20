@@ -19,7 +19,7 @@ import java.util.Date;
 @Entity
 @Data
 @DynamicUpdate
-public class TOrderMaster {
+public class OrderMaster {
 
     /**
      * 订单id.

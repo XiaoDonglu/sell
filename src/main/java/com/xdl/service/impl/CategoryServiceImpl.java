@@ -1,7 +1,7 @@
 package com.xdl.service.impl;
 
 import com.xdl.dao.IProductCategoryDao;
-import com.xdl.model.TProductCategory;
+import com.xdl.model.ProductCategory;
 import com.xdl.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,7 @@ public class CategoryServiceImpl implements ICategoryService {
     private IProductCategoryDao productCategoryDao;
 
     @Override
-    public TProductCategory findOne(Integer categoryId) {
+    public ProductCategory findOne(Integer categoryId) {
         /**
          * springBoot 2.0 后，使用 findById(id).get() 替代 findOne()
          */
@@ -29,17 +29,17 @@ public class CategoryServiceImpl implements ICategoryService {
     }
 
     @Override
-    public List<TProductCategory> findAll() {
+    public List<ProductCategory> findAll() {
         return productCategoryDao.findAll();
     }
 
     @Override
-    public List<TProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList) {
+    public List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList) {
         return productCategoryDao.findByCategoryTypeIn(categoryTypeList);
     }
 
     @Override
-    public TProductCategory save(TProductCategory productCategory) {
+    public ProductCategory save(ProductCategory productCategory) {
         return productCategoryDao.save(productCategory);
     }
 }

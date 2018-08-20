@@ -1,6 +1,6 @@
 package com.xdl.service;
 
-import com.xdl.model.TProductInfo;
+import com.xdl.model.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -20,14 +20,14 @@ public interface IProductService {
      * @param productId
      * @return
      */
-    TProductInfo findOne(String productId);
+    ProductInfo findOne(String productId);
 
     /**
      * 查询所有上架的商品
      *
      * @return
      */
-    List<TProductInfo> findUp();
+    List<ProductInfo> findUp();
 
     /**
      * 查询所有的商品，带分页
@@ -35,7 +35,7 @@ public interface IProductService {
      * @param pageable
      * @return
      */
-    Page<TProductInfo> findAll(Pageable pageable);
+    Page<ProductInfo> findAll(Pageable pageable);
 
     /**
      * 保存商品信息
@@ -43,7 +43,7 @@ public interface IProductService {
      * @param productInfo
      * @return
      */
-    TProductInfo save(TProductInfo productInfo);
+    ProductInfo save(ProductInfo productInfo);
 
     //TODO 加库存
 

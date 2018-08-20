@@ -1,6 +1,6 @@
 package com.xdl.dao;
 
-import com.xdl.model.TProductInfo;
+import com.xdl.model.ProductInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -11,12 +11,12 @@ import java.util.List;
  * @author xdl
  * @date 2018-08-18
  */
-public interface IProductInfoDao extends JpaRepository<TProductInfo, String> {
+public interface IProductInfoDao extends JpaRepository<ProductInfo, String> {
     /**
      * 通过商品状态查询商品list
      *
      * @param productStatus
      * @return
      */
-    List<TProductInfo> findByProductStatus(Integer productStatus);
+    List<ProductInfo> findByProductStatus(Integer productStatus);
 }

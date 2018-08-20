@@ -1,6 +1,6 @@
 package com.xdl.dao;
 
-import com.xdl.model.TOrderDetail;
+import com.xdl.model.OrderDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  * @author xdl
  * @date 2018.08.18
  */
-public interface IOrderDetailDao extends JpaRepository<TOrderDetail, String> {
+public interface IOrderDetailDao extends JpaRepository<OrderDetail, String> {
 
     /**
      * 查询某一订单下所有详情
@@ -19,5 +19,5 @@ public interface IOrderDetailDao extends JpaRepository<TOrderDetail, String> {
      * @param orderId
      * @return
      */
-    List<TOrderDetail> findByOrderId(String orderId);
+    List<OrderDetail> findByOrderId(String orderId);
 }

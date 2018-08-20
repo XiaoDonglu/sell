@@ -1,6 +1,6 @@
 package com.xdl.service;
 
-import com.xdl.model.TProductCategory;
+import com.xdl.model.ProductCategory;
 
 import java.util.List;
 
@@ -18,14 +18,14 @@ public interface ICategoryService {
      * @param categoryId
      * @return
      */
-    TProductCategory findOne(Integer categoryId);
+    ProductCategory findOne(Integer categoryId);
 
     /**
      * 查找所有类目
      *
      * @return
      */
-    List<TProductCategory> findAll();
+    List<ProductCategory> findAll();
 
     /**
      * 通过类目编号list查询类目list
@@ -33,7 +33,7 @@ public interface ICategoryService {
      * @param categoryTypeList
      * @return
      */
-    List<TProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
+    List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 
     /**
      * 添加和修改类目
@@ -41,6 +41,6 @@ public interface ICategoryService {
      * @param productCategory
      * @return
      */
-    TProductCategory save(TProductCategory productCategory);
+    ProductCategory save(ProductCategory productCategory);
 
 }

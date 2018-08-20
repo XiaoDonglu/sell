@@ -1,7 +1,6 @@
 package com.xdl.model;
 
 import lombok.Data;
-import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,7 +14,7 @@ import java.math.BigDecimal;
  */
 @Entity
 @Data
-public class TOrderDetail {
+public class OrderDetail {
 
     @Id
     private String detailId;

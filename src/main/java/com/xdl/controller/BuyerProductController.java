@@ -1,7 +1,7 @@
 package com.xdl.controller;
 
-import com.xdl.model.TProductCategory;
-import com.xdl.model.TProductInfo;
+import com.xdl.model.ProductCategory;
+import com.xdl.model.ProductInfo;
 import com.xdl.service.ICategoryService;
 import com.xdl.service.IProductService;
 import com.xdl.util.ResultVOUtil;
@@ -38,23 +38,23 @@ public class BuyerProductController {
     public ResultVO getList() {
 
         // 获取所有上架的商品
-        List<TProductInfo> productInfoList = productService.findUp();
+        List<ProductInfo> productInfoList = productService.findUp();
 
         // 获取所有上架商品的类目id
         List<Integer> categoryTypeList = productInfoList.stream().map(e -> e.getCategoryType())
                 .collect(Collectors.toList());
 
         // 获取所有上架商品的类目
-        List<TProductCategory> productCategoryList = categoryService.findByCategoryTypeIn(categoryTypeList);
+        List<ProductCategory> productCategoryList = categoryService.findByCategoryTypeIn(categoryTypeList);
 
         List<ProductVO> productVOList = new ArrayList<>();
-        for (TProductCategory productCategory : productCategoryList) {
+        for (ProductCategory productCategory : productCategoryList) {
             ProductVO productVO = new ProductVO();
             productVO.setCategoryName(productCategory.getCategoryName());
             productVO.setCategoryType(productCategory.getCategoryType());
 
             List<ProductInfoVO> productInfoVOList = new ArrayList<>();
-            for (TProductInfo productInfo : productInfoList) {
+            for (ProductInfo productInfo : productInfoList) {
                 if (productCategory.getCategoryId().equals(productInfo.getCategoryType())) {
                     ProductInfoVO productInfoVO = new ProductInfoVO();
                     BeanUtils.copyProperties(productInfo, productInfoVO);

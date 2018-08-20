@@ -18,7 +18,7 @@ import java.util.Date;
 @Entity
 @Data
 @DynamicUpdate
-public class TProductInfo {
+public class ProductInfo {
 
     @Id
     private String productId;

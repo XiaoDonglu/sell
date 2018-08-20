@@ -1,6 +1,6 @@
 package com.xdl.dao;
 
-import com.xdl.model.TOrderMaster;
+import com.xdl.model.OrderMaster;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author xdl
  * @date 2018.08.18
  */
-public interface IOrderMasterDao extends JpaRepository<TOrderMaster, String> {
+public interface IOrderMasterDao extends JpaRepository<OrderMaster, String> {
 
     /**
      * 根据买家openId查找所有订单
@@ -19,5 +19,5 @@ public interface IOrderMasterDao extends JpaRepository<TOrderMaster, String> {
      * @param pageable
      * @return
      */
-    Page<TOrderMaster> findByBuyerOpenId(String buyerOpenId, Pageable pageable);
+    Page<OrderMaster> findByBuyerOpenid(String buyerOpenId, Pageable pageable);
 }
