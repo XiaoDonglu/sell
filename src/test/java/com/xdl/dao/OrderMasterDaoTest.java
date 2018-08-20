@@ -15,8 +15,8 @@ import java.math.BigDecimal;
 /**
  * 订单
  *
- * @author: xdl
- * @date: 2018-08-20
+ * @author xdl
+ * @date 2018-08-20
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -43,7 +43,7 @@ public class OrderMasterDaoTest {
 
     @Test
     public void findByBuyerOpenid() throws Exception {
-        PageRequest request = new PageRequest(1, 3);
+        PageRequest request = PageRequest.of(1, 3);
 
         Page<OrderMaster> result = orderMasterDao.findByBuyerOpenid(OPENID, request);
 

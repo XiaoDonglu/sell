@@ -6,9 +6,9 @@ import com.xdl.vo.ResultVo;
  * 返回前台对象工具类
  *
  * @author xdl
- * @date 2018.08.18
+ * @date 2018-08-18
  */
-public class ResultVOUtil {
+public class ResultVoUtil {
 
     public static ResultVo success(Object object) {
         ResultVo resultVo = new ResultVo();

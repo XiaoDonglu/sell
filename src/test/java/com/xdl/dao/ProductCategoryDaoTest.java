@@ -15,8 +15,8 @@ import java.util.List;
 /**
  * 类目
  *
- * @author: xdl
- * @date: 2018-08-20
+ * @author xdl
+ * @date 2018-08-20
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

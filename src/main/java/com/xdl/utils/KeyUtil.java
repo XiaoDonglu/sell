@@ -5,8 +5,8 @@ import java.util.Random;
 /**
  * 随机数
  *
- * @author: xdl
- * @date: 2018-08-20
+ * @author xdl
+ * @date 2018-08-20
  */
 public class KeyUtil {
 

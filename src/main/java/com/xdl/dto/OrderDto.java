@@ -1,6 +1,8 @@
 package com.xdl.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.xdl.model.OrderDetail;
+import com.xdl.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -10,8 +12,8 @@ import java.util.List;
 /**
  * 订单
  *
- * @author: xdl
- * @date: 2018-08-20
+ * @author xdl
+ * @date 2018-08-20
  */
 @Data
 public class OrderDto {
@@ -59,11 +61,13 @@ public class OrderDto {
     /**
      * 创建时间.
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
 
     /**
      * 更新时间.
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 
     /**

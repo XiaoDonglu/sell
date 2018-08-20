@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 商品
@@ -29,7 +30,11 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public ProductInfo findOne(String productId) {
-        return productInfoDao.findById(productId).get();
+        Optional<ProductInfo> optional = productInfoDao.findById(productId);
+        if (optional.isPresent()) {
+            return optional.get();
+        }
+        return null;
     }
 
     @Override
@@ -51,13 +56,15 @@ public class ProductServiceImpl implements IProductService {
     @Transactional(rollbackFor = Exception.class)
     public void increaseStock(List<CartDto> cartDtoList) {
         for (CartDto cartDto : cartDtoList) {
-            ProductInfo productInfo = productInfoDao.findById(cartDto.getProductId()).get();
-            if (productInfo == null) {
+            ProductInfo productInfo;
+            Optional<ProductInfo> optional = productInfoDao.findById(cartDto.getProductId());
+            if (optional.isPresent()) {
+                productInfo = optional.get();
+            } else {
                 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
             }
 
             Integer result = productInfo.getProductStock() + cartDto.getProductQuantity();
-
             productInfo.setProductStock(result);
             productInfoDao.save(productInfo);
         }
@@ -67,8 +74,11 @@ public class ProductServiceImpl implements IProductService {
     @Transactional(rollbackFor = Exception.class)
     public void decreaseStock(List<CartDto> cartDtoList) {
         for (CartDto cartDto : cartDtoList) {
-            ProductInfo productInfo = productInfoDao.findById(cartDto.getProductId()).get();
-            if (productInfo == null) {
+            ProductInfo productInfo;
+            Optional<ProductInfo> optional = productInfoDao.findById(cartDto.getProductId());
+            if (optional.isPresent()) {
+                productInfo = optional.get();
+            } else {
                 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
             }
 

@@ -2,6 +2,7 @@ package com.xdl.service.impl;
 
 import com.xdl.dto.OrderDto;
 import com.xdl.enums.OrderStatusEnum;
+import com.xdl.enums.PayStatusEnum;
 import com.xdl.model.OrderDetail;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -32,7 +33,7 @@ public class OrderServiceImplTest {
 
     private final String BUYER_OPENID = "1101110";
 
-    private final String ORDER_ID = "1497183332311989948";
+    private final String ORDER_ID = "1534736282303975345";
 
     @Test
     public void create() throws Exception {
@@ -91,12 +92,12 @@ public class OrderServiceImplTest {
         Assert.assertEquals(OrderStatusEnum.FINISHED.getCode(), result.getOrderStatus());
     }
 
-    /*@Test
+    @Test
     public void paid() throws Exception {
         OrderDto orderDto = orderService.findOne(ORDER_ID);
         OrderDto result = orderService.paid(orderDto);
         Assert.assertEquals(PayStatusEnum.SUCCESS.getCode(), result.getPayStatus());
-    }*/
+    }
 
     /*@Test
     public void list() {

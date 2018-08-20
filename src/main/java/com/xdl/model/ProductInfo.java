@@ -13,7 +13,7 @@ import java.util.Date;
  * 商品
  *
  * @author xdl
- * @date 2018.08.18
+ * @date 2018-08-18
  */
 @Entity
 @Data

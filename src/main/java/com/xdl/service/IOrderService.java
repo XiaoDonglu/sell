@@ -7,8 +7,8 @@ import org.springframework.data.domain.Pageable;
 /**
  * 订单
  *
- * @author: xdl
- * @date: 2018-08-20
+ * @author xdl
+ * @date 2018-08-20
  */
 public interface IOrderService {
 
@@ -59,6 +59,6 @@ public interface IOrderService {
      * @param orderDto
      * @return
      */
-    OrderDto paio(OrderDto orderDto);
+    OrderDto paid(OrderDto orderDto);
 
 }

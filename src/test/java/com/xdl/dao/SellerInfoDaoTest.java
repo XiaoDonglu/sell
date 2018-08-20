@@ -7,8 +7,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * 卖家
  *
- * @author: xdl
- * @date: 2018-08-20
+ * @author xdl
+ * @date 2018-08-20
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

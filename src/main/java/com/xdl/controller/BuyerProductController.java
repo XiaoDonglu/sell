@@ -4,7 +4,7 @@ import com.xdl.model.ProductCategory;
 import com.xdl.model.ProductInfo;
 import com.xdl.service.ICategoryService;
 import com.xdl.service.IProductService;
-import com.xdl.utils.ResultVOUtil;
+import com.xdl.utils.ResultVoUtil;
 import com.xdl.vo.ProductInfoVo;
 import com.xdl.vo.ProductVo;
 import com.xdl.vo.ResultVo;
@@ -67,6 +67,6 @@ public class BuyerProductController {
             productVoList.add(productVo);
         }
 
-        return ResultVOUtil.success(productVoList);
+        return ResultVoUtil.success(productVoList);
     }
 }

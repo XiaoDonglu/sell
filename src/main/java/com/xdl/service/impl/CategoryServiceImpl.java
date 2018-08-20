@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 类目
@@ -22,10 +23,12 @@ public class CategoryServiceImpl implements ICategoryService {
 
     @Override
     public ProductCategory findOne(Integer categoryId) {
-        /**
-         * springBoot 2.0 后，使用 findById(id).get() 替代 findOne()
-         */
-        return productCategoryDao.findById(categoryId).get();
+        //springBoot 2.0 后，使用 findById(id).get() 替代 findOne()
+        Optional<ProductCategory> optional = productCategoryDao.findById(categoryId);
+        if (optional.isPresent()) {
+            return optional.get();
+        }
+        return null;
     }
 
     @Override

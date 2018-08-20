@@ -9,7 +9,7 @@ import java.util.List;
  * 商品，包含类目
  *
  * @author xdl
- * @date 2018.08.18
+ * @date 2018-08-18
  */
 @Data
 public class ProductVo {
