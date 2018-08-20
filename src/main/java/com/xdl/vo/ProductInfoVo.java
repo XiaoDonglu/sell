@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  * @date 2018.08.18
  */
 @Data
-public class ProductInfoVO {
+public class ProductInfoVo {
 
     @JsonProperty("id")
     private String productId;

@@ -1,5 +1,6 @@
 package com.xdl.service;
 
+import com.xdl.dto.CartDto;
 import com.xdl.model.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -45,8 +46,18 @@ public interface IProductService {
      */
     ProductInfo save(ProductInfo productInfo);
 
-    //TODO 加库存
+    /**
+     * 加库存
+     *
+     * @param cartDtoList
+     */
+    void increaseStock(List<CartDto> cartDtoList);
 
-    //TODO 减库存
+    /**
+     * 减库存
+     *
+     * @param cartDtoList
+     */
+    void decreaseStock(List<CartDto> cartDtoList);
 
 }

@@ -4,10 +4,10 @@ import com.xdl.model.ProductCategory;
 import com.xdl.model.ProductInfo;
 import com.xdl.service.ICategoryService;
 import com.xdl.service.IProductService;
-import com.xdl.util.ResultVOUtil;
-import com.xdl.vo.ProductInfoVO;
-import com.xdl.vo.ProductVO;
-import com.xdl.vo.ResultVO;
+import com.xdl.utils.ResultVOUtil;
+import com.xdl.vo.ProductInfoVo;
+import com.xdl.vo.ProductVo;
+import com.xdl.vo.ResultVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +35,7 @@ public class BuyerProductController {
     private ICategoryService categoryService;
 
     @GetMapping("list")
-    public ResultVO getList() {
+    public ResultVo getList() {
 
         // 获取所有上架的商品
         List<ProductInfo> productInfoList = productService.findUp();
@@ -47,26 +47,26 @@ public class BuyerProductController {
         // 获取所有上架商品的类目
         List<ProductCategory> productCategoryList = categoryService.findByCategoryTypeIn(categoryTypeList);
 
-        List<ProductVO> productVOList = new ArrayList<>();
+        List<ProductVo> productVoList = new ArrayList<>();
         for (ProductCategory productCategory : productCategoryList) {
-            ProductVO productVO = new ProductVO();
-            productVO.setCategoryName(productCategory.getCategoryName());
-            productVO.setCategoryType(productCategory.getCategoryType());
+            ProductVo productVo = new ProductVo();
+            productVo.setCategoryName(productCategory.getCategoryName());
+            productVo.setCategoryType(productCategory.getCategoryType());
 
-            List<ProductInfoVO> productInfoVOList = new ArrayList<>();
+            List<ProductInfoVo> productInfoVoList = new ArrayList<>();
             for (ProductInfo productInfo : productInfoList) {
                 if (productCategory.getCategoryId().equals(productInfo.getCategoryType())) {
-                    ProductInfoVO productInfoVO = new ProductInfoVO();
-                    BeanUtils.copyProperties(productInfo, productInfoVO);
+                    ProductInfoVo productInfoVo = new ProductInfoVo();
+                    BeanUtils.copyProperties(productInfo, productInfoVo);
 
-                    productInfoVOList.add(productInfoVO);
+                    productInfoVoList.add(productInfoVo);
                 }
             }
 
-            productVO.setProductInfoVOList(productInfoVOList);
-            productVOList.add(productVO);
+            productVo.setProductInfoVoList(productInfoVoList);
+            productVoList.add(productVo);
         }
 
-        return ResultVOUtil.success(productVOList);
+        return ResultVOUtil.success(productVoList);
     }
 }

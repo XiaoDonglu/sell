@@ -9,7 +9,7 @@ import lombok.Data;
  * @date 2018.08.18
  */
 @Data
-public class ResultVO<T> {
+public class ResultVo<T> {
 
     /**
      * 状态码
