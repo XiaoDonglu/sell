@@ -61,4 +61,12 @@ public interface IOrderService {
      */
     OrderDto paid(OrderDto orderDto);
 
+    /**
+     * 查询订单列表
+     *
+     * @param pageable
+     * @return
+     */
+    Page<OrderDto> findList(Pageable pageable);
+
 }

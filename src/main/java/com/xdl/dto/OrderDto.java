@@ -1,7 +1,11 @@
 package com.xdl.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.xdl.enums.OrderStatusEnum;
+import com.xdl.enums.PayStatusEnum;
 import com.xdl.model.OrderDetail;
+import com.xdl.utils.EnumUtil;
 import com.xdl.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 
@@ -74,5 +78,15 @@ public class OrderDto {
      * 订单详情
      */
     private List<OrderDetail> orderDetailList;
+
+    @JsonIgnore
+    public OrderStatusEnum getOrderStatusEnum() {
+        return EnumUtil.getByCode(orderStatus, OrderStatusEnum.class);
+    }
+
+    @JsonIgnore
+    public PayStatusEnum getPayStatusEnum() {
+        return EnumUtil.getByCode(payStatus, PayStatusEnum.class);
+    }
 
 }

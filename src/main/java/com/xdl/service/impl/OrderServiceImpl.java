@@ -124,7 +124,7 @@ public class OrderServiceImpl implements IOrderService {
 
         List<OrderDto> orderDtoList = OrderMaster2OrderDtoConverter.convert(orderMasterPage.getContent());
 
-        return new PageImpl<OrderDto>(orderDtoList, pageable, orderMasterPage.getTotalElements());
+        return new PageImpl<>(orderDtoList, pageable, orderMasterPage.getTotalElements());
     }
 
     @Override
@@ -209,5 +209,14 @@ public class OrderServiceImpl implements IOrderService {
         }
 
         return orderDto;
+    }
+
+    @Override
+    public Page<OrderDto> findList(Pageable pageable) {
+        Page<OrderMaster> orderMasterPage = orderMasterDao.findAll(pageable);
+
+        List<OrderDto> orderDtoList = OrderMaster2OrderDtoConverter.convert(orderMasterPage.getContent());
+
+        return new PageImpl<>(orderDtoList, pageable, orderMasterPage.getTotalElements());
     }
 }

@@ -1,6 +1,8 @@
 package com.xdl.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xdl.enums.ProductStatusEnum;
+import com.xdl.utils.EnumUtil;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -61,5 +63,10 @@ public class ProductInfo {
     private Date createTime;
 
     private Date updateTime;
+
+    @JsonIgnore
+    public ProductStatusEnum getProductStatusEnum() {
+        return EnumUtil.getByCode(productStatus, ProductStatusEnum.class);
+    }
 
 }
