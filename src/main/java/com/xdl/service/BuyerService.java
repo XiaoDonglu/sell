@@ -8,7 +8,7 @@ import com.xdl.dto.OrderDto;
  * @author xdl
  * @date 2018-08-20
  */
-public interface IBuyerService {
+public interface BuyerService {
 
     /**
      * 查找一个订单

@@ -6,7 +6,7 @@ import com.xdl.dto.OrderDto;
 import com.xdl.enums.ResultEnum;
 import com.xdl.exception.SellException;
 import com.xdl.form.OrderForm;
-import com.xdl.model.OrderDetail;
+import com.xdl.entity.OrderDetail;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;

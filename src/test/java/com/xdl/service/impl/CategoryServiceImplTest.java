@@ -1,6 +1,6 @@
 package com.xdl.service.impl;
 
-import com.xdl.model.ProductCategory;
+import com.xdl.entity.ProductCategory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

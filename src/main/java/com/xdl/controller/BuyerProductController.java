@@ -1,9 +1,9 @@
 package com.xdl.controller;
 
-import com.xdl.model.ProductCategory;
-import com.xdl.model.ProductInfo;
-import com.xdl.service.ICategoryService;
-import com.xdl.service.IProductService;
+import com.xdl.entity.ProductCategory;
+import com.xdl.entity.ProductInfo;
+import com.xdl.service.CategoryService;
+import com.xdl.service.ProductService;
 import com.xdl.utils.ResultVoUtil;
 import com.xdl.vo.ProductInfoVo;
 import com.xdl.vo.ProductVo;
@@ -29,10 +29,10 @@ import java.util.stream.Collectors;
 public class BuyerProductController {
 
     @Autowired
-    private IProductService productService;
+    private ProductService productService;
 
     @Autowired
-    private ICategoryService categoryService;
+    private CategoryService categoryService;
 
     @GetMapping("list")
     public ResultVo getList() {

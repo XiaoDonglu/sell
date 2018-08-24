@@ -1,6 +1,6 @@
-package com.xdl.dao;
+package com.xdl.repository;
 
-import com.xdl.model.OrderMaster;
+import com.xdl.entity.OrderMaster;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +23,7 @@ import java.math.BigDecimal;
 public class OrderMasterDaoTest {
 
     @Autowired
-    private IOrderMasterDao orderMasterDao;
+    private OrderMasterDao orderMasterDao;
 
     private final String OPENID = "110110";
 

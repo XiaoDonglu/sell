@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.xdl.enums.OrderStatusEnum;
 import com.xdl.enums.PayStatusEnum;
-import com.xdl.model.OrderDetail;
+import com.xdl.entity.OrderDetail;
 import com.xdl.utils.EnumUtil;
 import com.xdl.utils.serializer.Date2LongSerializer;
 import lombok.Data;

@@ -1,12 +1,12 @@
 package com.xdl.controller;
 
-import com.xdl.model.ProductCategory;
-import com.xdl.model.ProductInfo;
+import com.xdl.entity.ProductCategory;
+import com.xdl.entity.ProductInfo;
 import com.xdl.exception.SellException;
 import com.xdl.form.ProductForm;
 import com.xdl.utils.KeyUtil;
-import com.xdl.service.ICategoryService;
-import com.xdl.service.IProductService;
+import com.xdl.service.CategoryService;
+import com.xdl.service.ProductService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -35,10 +35,10 @@ import java.util.Map;
 public class SellerProductController {
 
     @Autowired
-    private IProductService productService;
+    private ProductService productService;
 
     @Autowired
-    private ICategoryService categoryService;
+    private CategoryService categoryService;
 
     /**
      * 列表
@@ -50,7 +50,7 @@ public class SellerProductController {
      */
     @GetMapping("/list")
     public ModelAndView list(@RequestParam(value = "page", defaultValue = "1") Integer page,
-                             @RequestParam(value = "size", defaultValue = "10") Integer size,
+                             @RequestParam(value = "size", defaultValue = "5") Integer size,
                              Map<String, Object> map) {
         PageRequest request = PageRequest.of(page - 1, size);
         Page<ProductInfo> productInfoPage = productService.findAll(request);
@@ -104,6 +104,13 @@ public class SellerProductController {
         return new ModelAndView("common/success", map);
     }
 
+    /**
+     * 修改商品页面
+     *
+     * @param productId
+     * @param map
+     * @return
+     */
     @GetMapping("/index")
     public ModelAndView index(@RequestParam(value = "productId", required = false) String productId,
                               Map<String, Object> map) {

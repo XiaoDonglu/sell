@@ -1,6 +1,6 @@
-package com.xdl.dao;
+package com.xdl.repository;
 
-import com.xdl.model.OrderDetail;
+import com.xdl.entity.OrderDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  * @author xdl
  * @date 2018.08.18
  */
-public interface IOrderDetailDao extends JpaRepository<OrderDetail, String> {
+public interface OrderDetailDao extends JpaRepository<OrderDetail, String> {
 
     /**
      * 查询某一订单下所有详情

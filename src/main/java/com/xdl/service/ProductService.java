@@ -1,7 +1,7 @@
 package com.xdl.service;
 
 import com.xdl.dto.CartDto;
-import com.xdl.model.ProductInfo;
+import com.xdl.entity.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -13,7 +13,7 @@ import java.util.List;
  * @author xdl
  * @date 2018-08-18
  */
-public interface IProductService {
+public interface ProductService {
 
     /**
      * 根据商品id查找商品

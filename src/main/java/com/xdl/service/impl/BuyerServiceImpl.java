@@ -3,8 +3,8 @@ package com.xdl.service.impl;
 import com.xdl.dto.OrderDto;
 import com.xdl.enums.ResultEnum;
 import com.xdl.exception.SellException;
-import com.xdl.service.IBuyerService;
-import com.xdl.service.IOrderService;
+import com.xdl.service.BuyerService;
+import com.xdl.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,10 +17,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Slf4j
-public class BuyerServiceImpl implements IBuyerService {
+public class BuyerServiceImpl implements BuyerService {
 
     @Autowired
-    private IOrderService orderService;
+    private OrderService orderService;
 
     @Override
     public OrderDto findOrderOne(String openid, String orderId) {

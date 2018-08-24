@@ -4,10 +4,10 @@
 <body>
 <div id="wrapper" class="toggled">
 
-    <#--边栏sidebar-->
-    <#include "../common/nav.ftl">
+<#--边栏sidebar-->
+<#include "../common/nav.ftl">
 
-    <#--主要内容content-->
+<#--主要内容content-->
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <div class="row clearfix">
@@ -33,7 +33,7 @@
                         <tr>
                             <td>${productInfo.productId}</td>
                             <td>${productInfo.productName}</td>
-                            <td><img height="100" width="100" src="${productInfo.productIcon}" alt=""></td>
+                            <td><img style="max-height: 100px; max-width: 100px;" src="${productInfo.productIcon}" alt=""></td>
                             <td>${productInfo.productPrice}</td>
                             <td>${productInfo.productStock}</td>
                             <td>${productInfo.productDescription}</td>
@@ -60,21 +60,21 @@
                     <#if currentPage lte 1>
                         <li class="disabled"><a href="#">上一页</a></li>
                     <#else>
-                        <li><a href="/sell/seller/order/list?page=${currentPage - 1}&size=${size}">上一页</a></li>
+                        <li><a href="/sell/seller/product/list?page=${currentPage - 1}&size=${size}">上一页</a></li>
                     </#if>
 
                     <#list 1..productInfoPage.getTotalPages() as index>
                         <#if currentPage == index>
                             <li class="disabled"><a href="#">${index}</a></li>
                         <#else>
-                            <li><a href="/sell/seller/order/list?page=${index}&size=${size}">${index}</a></li>
+                            <li><a href="/sell/seller/product/list?page=${index}&size=${size}">${index}</a></li>
                         </#if>
                     </#list>
 
                     <#if currentPage gte productInfoPage.getTotalPages()>
                         <li class="disabled"><a href="#">下一页</a></li>
                     <#else>
-                        <li><a href="/sell/seller/order/list?page=${currentPage + 1}&size=${size}">下一页</a></li>
+                        <li><a href="/sell/seller/product/list?page=${currentPage + 1}&size=${size}">下一页</a></li>
                     </#if>
                     </ul>
                 </div>

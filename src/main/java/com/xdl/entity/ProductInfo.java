@@ -1,4 +1,4 @@
-package com.xdl.model;
+package com.xdl.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xdl.enums.ProductStatusEnum;

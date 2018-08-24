@@ -1,6 +1,6 @@
-package com.xdl.dao;
+package com.xdl.repository;
 
-import com.xdl.model.OrderDetail;
+import com.xdl.entity.OrderDetail;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import java.util.List;
 public class OrderDetailDaoTest {
 
     @Autowired
-    private IOrderDetailDao orderDetailDao;
+    private OrderDetailDao orderDetailDao;
 
     @Test
     public void saveTest() {

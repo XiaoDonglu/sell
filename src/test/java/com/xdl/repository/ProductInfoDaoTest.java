@@ -1,6 +1,6 @@
-package com.xdl.dao;
+package com.xdl.repository;
 
-import com.xdl.model.ProductInfo;
+import com.xdl.entity.ProductInfo;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import java.util.List;
 public class ProductInfoDaoTest {
 
     @Autowired
-    private IProductInfoDao productInfoDao;
+    private ProductInfoDao productInfoDao;
 
     @Test
     public void saveTest() {

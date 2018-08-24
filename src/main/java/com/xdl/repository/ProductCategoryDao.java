@@ -1,6 +1,6 @@
-package com.xdl.dao;
+package com.xdl.repository;
 
-import com.xdl.model.ProductCategory;
+import com.xdl.entity.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  * @author xdl
  * @date 2018-08-18
  */
-public interface IProductCategoryDao extends JpaRepository<ProductCategory, Integer> {
+public interface ProductCategoryDao extends JpaRepository<ProductCategory, Integer> {
 
     /**
      * 通过类目编号list查询类目list

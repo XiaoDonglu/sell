@@ -1,6 +1,6 @@
-package com.xdl.dao;
+package com.xdl.repository;
 
-import com.xdl.model.ProductInfo;
+import com.xdl.entity.ProductInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  * @author xdl
  * @date 2018-08-18
  */
-public interface IProductInfoDao extends JpaRepository<ProductInfo, String> {
+public interface ProductInfoDao extends JpaRepository<ProductInfo, String> {
     /**
      * 通过商品状态查询商品list
      *

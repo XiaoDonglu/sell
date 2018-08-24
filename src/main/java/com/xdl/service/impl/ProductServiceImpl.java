@@ -1,12 +1,12 @@
 package com.xdl.service.impl;
 
-import com.xdl.dao.IProductInfoDao;
+import com.xdl.repository.ProductInfoDao;
 import com.xdl.dto.CartDto;
 import com.xdl.enums.ProductStatusEnum;
 import com.xdl.enums.ResultEnum;
 import com.xdl.exception.SellException;
-import com.xdl.model.ProductInfo;
-import com.xdl.service.IProductService;
+import com.xdl.entity.ProductInfo;
+import com.xdl.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,10 +23,10 @@ import java.util.Optional;
  * @date 2018-08-18
  */
 @Service
-public class ProductServiceImpl implements IProductService {
+public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    IProductInfoDao productInfoDao;
+    ProductInfoDao productInfoDao;
 
     @Override
     public ProductInfo findOne(String productId) {

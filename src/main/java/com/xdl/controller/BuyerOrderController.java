@@ -5,8 +5,8 @@ import com.xdl.dto.OrderDto;
 import com.xdl.enums.ResultEnum;
 import com.xdl.exception.SellException;
 import com.xdl.form.OrderForm;
-import com.xdl.service.IBuyerService;
-import com.xdl.service.IOrderService;
+import com.xdl.service.BuyerService;
+import com.xdl.service.OrderService;
 import com.xdl.utils.ResultVoUtil;
 import com.xdl.vo.ResultVo;
 import lombok.extern.slf4j.Slf4j;
@@ -35,10 +35,10 @@ import java.util.Map;
 public class BuyerOrderController {
 
     @Autowired
-    private IOrderService orderService;
+    private OrderService orderService;
 
     @Autowired
-    private IBuyerService buyerService;
+    private BuyerService buyerService;
 
     /**
      * 创建订单

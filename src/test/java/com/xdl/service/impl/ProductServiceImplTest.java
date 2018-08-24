@@ -1,6 +1,6 @@
 package com.xdl.service.impl;
 
-import com.xdl.model.ProductInfo;
+import com.xdl.entity.ProductInfo;
 import com.xdl.enums.ProductStatusEnum;
 import org.junit.Assert;
 import org.junit.Test;
@@ -63,7 +63,7 @@ public class ProductServiceImplTest {
         Assert.assertNotNull(result);
     }
 
-    /*@Test
+    @Test
     public void onSale() {
         ProductInfo result = productService.onSale("123456");
         Assert.assertEquals(ProductStatusEnum.UP, result.getProductStatusEnum());
@@ -73,6 +73,5 @@ public class ProductServiceImplTest {
     public void offSale() {
         ProductInfo result = productService.offSale("123456");
         Assert.assertEquals(ProductStatusEnum.DOWN, result.getProductStatusEnum());
-    }*/
-
+    }
 }

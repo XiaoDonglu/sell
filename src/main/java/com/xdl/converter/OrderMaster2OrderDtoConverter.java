@@ -1,7 +1,7 @@
 package com.xdl.converter;
 
 import com.xdl.dto.OrderDto;
-import com.xdl.model.OrderMaster;
+import com.xdl.entity.OrderMaster;
 import org.springframework.beans.BeanUtils;
 
 import java.util.List;

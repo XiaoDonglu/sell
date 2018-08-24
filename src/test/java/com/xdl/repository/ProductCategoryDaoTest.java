@@ -1,6 +1,6 @@
-package com.xdl.dao;
+package com.xdl.repository;
 
-import com.xdl.model.ProductCategory;
+import com.xdl.entity.ProductCategory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +23,7 @@ import java.util.List;
 public class ProductCategoryDaoTest {
 
     @Autowired
-    private IProductCategoryDao productCategoryDao;
+    private ProductCategoryDao productCategoryDao;
 
     @Test
     public void findOneTest() {

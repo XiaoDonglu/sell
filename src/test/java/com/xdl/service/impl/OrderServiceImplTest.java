@@ -3,7 +3,7 @@ package com.xdl.service.impl;
 import com.xdl.dto.OrderDto;
 import com.xdl.enums.OrderStatusEnum;
 import com.xdl.enums.PayStatusEnum;
-import com.xdl.model.OrderDetail;
+import com.xdl.entity.OrderDetail;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;

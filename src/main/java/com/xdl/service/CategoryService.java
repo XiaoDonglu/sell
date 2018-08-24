@@ -1,6 +1,6 @@
 package com.xdl.service;
 
-import com.xdl.model.ProductCategory;
+import com.xdl.entity.ProductCategory;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * @author xdl
  * @date 2018-08-18
  */
-public interface ICategoryService {
+public interface CategoryService {
 
     /**
      * 根据类目id查找类目

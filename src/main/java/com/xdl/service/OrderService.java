@@ -10,7 +10,7 @@ import org.springframework.data.domain.Pageable;
  * @author xdl
  * @date 2018-08-20
  */
-public interface IOrderService {
+public interface OrderService {
 
     /**
      * 创建订单

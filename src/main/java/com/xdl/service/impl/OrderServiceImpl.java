@@ -1,19 +1,19 @@
 package com.xdl.service.impl;
 
 import com.xdl.converter.OrderMaster2OrderDtoConverter;
-import com.xdl.dao.IOrderDetailDao;
-import com.xdl.dao.IOrderMasterDao;
+import com.xdl.repository.OrderDetailDao;
+import com.xdl.repository.OrderMasterDao;
 import com.xdl.dto.CartDto;
 import com.xdl.dto.OrderDto;
 import com.xdl.enums.OrderStatusEnum;
 import com.xdl.enums.PayStatusEnum;
 import com.xdl.enums.ResultEnum;
 import com.xdl.exception.SellException;
-import com.xdl.model.OrderDetail;
-import com.xdl.model.OrderMaster;
-import com.xdl.model.ProductInfo;
-import com.xdl.service.IOrderService;
-import com.xdl.service.IProductService;
+import com.xdl.entity.OrderDetail;
+import com.xdl.entity.OrderMaster;
+import com.xdl.entity.ProductInfo;
+import com.xdl.service.OrderService;
+import com.xdl.service.ProductService;
 import com.xdl.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -39,16 +39,16 @@ import java.util.stream.Collectors;
  */
 @Service
 @Slf4j
-public class OrderServiceImpl implements IOrderService {
+public class OrderServiceImpl implements OrderService {
 
     @Autowired
-    private IProductService productService;
+    private ProductService productService;
 
     @Autowired
-    private IOrderDetailDao orderDetailDao;
+    private OrderDetailDao orderDetailDao;
 
     @Autowired
-    private IOrderMasterDao orderMasterDao;
+    private OrderMasterDao orderMasterDao;
 
     @Override
     @Transactional

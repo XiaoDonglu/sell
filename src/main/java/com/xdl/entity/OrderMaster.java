@@ -1,4 +1,4 @@
-package com.xdl.model;
+package com.xdl.entity;
 
 import com.xdl.enums.OrderStatusEnum;
 import com.xdl.enums.PayStatusEnum;

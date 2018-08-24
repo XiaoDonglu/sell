@@ -1,8 +1,8 @@
 package com.xdl.service.impl;
 
-import com.xdl.dao.IProductCategoryDao;
-import com.xdl.model.ProductCategory;
-import com.xdl.service.ICategoryService;
+import com.xdl.repository.ProductCategoryDao;
+import com.xdl.entity.ProductCategory;
+import com.xdl.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +16,10 @@ import java.util.Optional;
  * @date 2018-08-18
  */
 @Service
-public class CategoryServiceImpl implements ICategoryService {
+public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
-    private IProductCategoryDao productCategoryDao;
+    private ProductCategoryDao productCategoryDao;
 
     @Override
     public ProductCategory findOne(Integer categoryId) {

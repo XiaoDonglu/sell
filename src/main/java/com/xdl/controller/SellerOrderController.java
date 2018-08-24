@@ -3,7 +3,7 @@ package com.xdl.controller;
 import com.xdl.dto.OrderDto;
 import com.xdl.enums.ResultEnum;
 import com.xdl.exception.SellException;
-import com.xdl.service.IOrderService;
+import com.xdl.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -28,7 +28,7 @@ import java.util.Map;
 public class SellerOrderController {
 
     @Autowired
-    private IOrderService orderService;
+    private OrderService orderService;
 
     /**
      * 订单列表
