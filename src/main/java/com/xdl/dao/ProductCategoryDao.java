@@ -1,4 +1,4 @@
-package com.xdl.repository;
+package com.xdl.dao;
 
 import com.xdl.entity.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;

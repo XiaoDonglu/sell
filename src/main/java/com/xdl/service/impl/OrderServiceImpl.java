@@ -1,8 +1,8 @@
 package com.xdl.service.impl;
 
 import com.xdl.converter.OrderMaster2OrderDtoConverter;
-import com.xdl.repository.OrderDetailDao;
-import com.xdl.repository.OrderMasterDao;
+import com.xdl.dao.OrderDetailDao;
+import com.xdl.dao.OrderMasterDao;
 import com.xdl.dto.CartDto;
 import com.xdl.dto.OrderDto;
 import com.xdl.enums.OrderStatusEnum;

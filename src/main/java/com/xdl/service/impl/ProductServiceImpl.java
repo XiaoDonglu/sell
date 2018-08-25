@@ -1,6 +1,6 @@
 package com.xdl.service.impl;
 
-import com.xdl.repository.ProductInfoDao;
+import com.xdl.dao.ProductInfoDao;
 import com.xdl.dto.CartDto;
 import com.xdl.enums.ProductStatusEnum;
 import com.xdl.enums.ResultEnum;

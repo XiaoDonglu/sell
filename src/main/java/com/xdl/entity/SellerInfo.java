@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * 买家
+ * 卖家信息
  *
  * @author xdl
  * @date 2018-08-18

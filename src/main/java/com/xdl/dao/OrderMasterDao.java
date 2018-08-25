@@ -1,4 +1,4 @@
-package com.xdl.repository;
+package com.xdl.dao;
 
 import com.xdl.entity.OrderMaster;
 import org.springframework.data.domain.Page;

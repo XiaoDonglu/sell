@@ -1,6 +1,6 @@
 package com.xdl.service.impl;
 
-import com.xdl.repository.ProductCategoryDao;
+import com.xdl.dao.ProductCategoryDao;
 import com.xdl.entity.ProductCategory;
 import com.xdl.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

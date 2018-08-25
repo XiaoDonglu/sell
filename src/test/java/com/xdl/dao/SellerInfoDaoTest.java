@@ -1,6 +1,11 @@
-package com.xdl.repository;
+package com.xdl.dao;
 
+import com.xdl.entity.SellerInfo;
+import com.xdl.utils.KeyUtil;
+import org.junit.Assert;
+import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -14,8 +19,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SellerInfoDaoTest {
 
-    /*@Autowired
-    private ISellerInfoDao sellerInfoDao;
+    @Autowired
+    private SellerInfoDao sellerInfoDao;
 
     @Test
     public void save() {
@@ -30,9 +35,9 @@ public class SellerInfoDaoTest {
     }
 
     @Test
-    public void findByOpenid() throws Exception {
-        SellerInfo result = sellerInfoDao.findByOpenid("abc");
+    public void findByUsername() throws Exception {
+        SellerInfo result = sellerInfoDao.findByUsername("abc");
         Assert.assertEquals("abc", result.getOpenid());
-    }*/
+    }
 
 }

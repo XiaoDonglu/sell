@@ -1,4 +1,4 @@
-package com.xdl.repository;
+package com.xdl.dao;
 
 import com.xdl.entity.ProductCategory;
 import org.junit.Assert;
@@ -50,7 +50,7 @@ public class ProductCategoryDaoTest {
 
     @Test
     public void updateTest() {
-//        ProductCategory productCategory = repository.findOne(4);
+//        ProductCategory productCategory = dao.findOne(4);
 //        productCategory.setCategoryName("男生最爱1");
         ProductCategory productCategory = new ProductCategory("男生最爱", 4);
         ProductCategory result = productCategoryDao.save(productCategory);
