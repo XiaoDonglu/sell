@@ -12,11 +12,11 @@
                     <form role="form" method="post" action="/sell/seller/login">
                         <div class="form-group">
                             <label>用户名</label>
-                            <input name="username" type="text" class="form-control"/>
+                            <input name="username" type="text" class="form-control" style="width: 200px"/>
                         </div>
                         <div class="form-group">
                             <label>密码</label>
-                            <input name="password" type="password" class="form-control"/>
+                            <input name="password" type="password" class="form-control" style="width: 200px"/>
                         </div>
                         <button type="submit" class="btn btn-default">登录</button>
                     </form>
