@@ -18,8 +18,17 @@ spring:
     port: 6379
     password:
 
+  application:
+    name: sell
+
 # server
 server:
 
   servlet:
     context-path: /sell
+
+# eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
