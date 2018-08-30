@@ -1,34 +1,46 @@
-# spring
+#
 spring:
-
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
     url: jdbc:mysql://192.168.93.145/sell?characterEncoding=utf-8&useSSL=false
-
   jpa:
     show-sql: true
-
   jackson:
     default-property-inclusion: non_null
-
   redis:
     host: 192.168.93.145
     port: 6379
     password:
-
   application:
     name: sell
 
-# server
+#
 server:
-
   servlet:
     context-path: /sell
 
-# eureka
+#
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:1111/eureka/
+    # 使用spring-boot-starter-actuator的/health节点进行健康检查
+    healthCheck:
+      enabled: true
+  instance:
+    # 配置实例名
+    instance-id: ${spring.application.name}:${random.int}
+    # 状态页
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
+    # 健康检查
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
+
+#
+management:
+  endpoints:
+    web:
+      exposure:
+        # 开启actuator全部监控节点
+        include: '*'

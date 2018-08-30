@@ -29,8 +29,11 @@ public class WebAppMvcConfig implements WebMvcConfigurer {
                 //添加需要验证登录用户操作权限的请求
                 .addPathPatterns("/**")
                 //排除不需要验证登录用户操作权限的请求
-                .excludePathPatterns("/", "/seller/index")
-                .excludePathPatterns("/seller/login", "/seller/logout");
+                .excludePathPatterns("/")
+                .excludePathPatterns("/seller/index")
+                .excludePathPatterns("/hello")
+                .excludePathPatterns("/seller/login")
+                .excludePathPatterns("/seller/logout");
     }
 
 }
